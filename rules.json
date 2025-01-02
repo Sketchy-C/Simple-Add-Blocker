@@ -1,17 +1,14 @@
-{
-    "name":"Simple Ad Blocker",
-    "version":"1.0.0",
-    "manifest_version": 3,
-    "permissions":[
-        "declarativeNetRequest"
-    ],
-    "declarative_net_request":{
-        "rule_resources":[
-            {
-                "id":"ruleset_1",
-                "enabled": true,
-                "path":"rules.json"
-            }
-        ]
+[
+    {
+        "id":1,
+        "priority": 1,
+        "action":{ "type": "block"},
+        "condition": { "urlFIlter":"*://*doubleclick.net/*"}
+    },
+    {
+        "id":2,
+        "priority":1,
+        "action": {"type":"block"},
+        "condition":{"urlFIlter":"*://googleadservices.com/*"}
     }
-}
+]
